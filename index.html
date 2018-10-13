@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Your page title here :)</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div style="margin-top: 3%" class="row">
+      <h1> Make an author query with a few clicks </h1>
+    </div>
+    <div class="row">
+      <div class="one-half column" style="margin-top: 3%">
+        <form>
+  <label for="exampleMessage">Enter your data</label>
+  <textarea id="data" class="u-full-width" style="min-height: 400px" placeholder="Paste the column containing your exported social handles here." id="exampleMessage"></textarea>
+  <label class="example-send-yourself-copy">
+
+  </label>
+  <div id="buttonOne">
+  <button class="button-primary">Submit </button>
+</div>
+</form>
+      </div>
+      <div class="one-half column" style="margin-top: 3%">
+
+      <label for="exampleMessage">Get your query :)</label>
+      <textarea id="convertedData" class="u-full-width" style="min-height: 400px" placeholder="Your query will appear here" id="exampleMessage"></textarea>
+      <label class="example-send-yourself-copy">
+      </label>
+      <button id="buttonForCopy" data-clipboard-target="#convertedData" class="button-primary">Copy </button>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+  <script src="/Users/boyana/Documents/Dev/Automatic Query Creation/script.js"></script>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
