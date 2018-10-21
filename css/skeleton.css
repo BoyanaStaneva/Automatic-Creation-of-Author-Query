@@ -391,6 +391,28 @@ hr {
   display: table;
   clear: both; }
 
+/*Custom
+--------------------------------- */
+
+.output-textareas {
+  /* Demo */
+  height: 400px;
+  /* Demo */
+  display: flex;
+  flex-direction: column;
+}
+
+.output-textareas .flexyBoy {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.flexyBoy textarea {
+  flex: 1;
+}
+
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

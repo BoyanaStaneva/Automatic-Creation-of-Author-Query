@@ -33,28 +33,37 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div style="margin-top: 3%" class="row">
-      <h1> Make an author query with a few clicks </h1>
+      <h2> Make an author query with a few clicks </h2>
+      <p>Hi, there! You can use this tool to make an author query. Paste the data directly from the column of your speadsheet.</p>
     </div>
     <div class="row">
       <div class="one-half column" style="margin-top: 3%">
         <form>
-  <label for="exampleMessage">Enter your data</label>
-  <textarea id="data" class="u-full-width" style="min-height: 400px" placeholder="Paste the column containing your exported social handles here." id="exampleMessage"></textarea>
-  <label class="example-send-yourself-copy">
+        <label for="exampleMessage">Enter your data</label>
+          <div class="output-textareas">
+            <div class="flexyBoy">
+        <textarea id="data" class="u-full-width" placeholder="Paste the column containing your exported social handles here." id="exampleMessage"></textarea>
+        <div id="buttonOne">
+        <button class="button-primary">Submit </button>
+      </div>
+          </div>
+          </div>
+        <label class="example-send-yourself-copy">
 
   </label>
-  <div id="buttonOne">
-  <button class="button-primary">Submit </button>
-</div>
+
 </form>
       </div>
       <div class="one-half column" style="margin-top: 3%">
-
-      <label for="exampleMessage">Get your query :)</label>
-      <textarea id="convertedData" class="u-full-width" style="min-height: 400px" placeholder="Your query will appear here" id="exampleMessage"></textarea>
-      <label class="example-send-yourself-copy">
-      </label>
-      <button id="buttonForCopy" data-clipboard-target="#convertedData" class="button-primary">Copy </button>
+        <label for="exampleMessage">Get your query :)</label>
+         <div class="output-textareas">
+           <div class="flexyBoy" id="storingQueries">
+           <textarea id="convertedData" class="u-full-width" placeholder="Your query will appear here" id="exampleMessage"></textarea>
+              <div id="buttonForCopy">
+             <button  data-clipboard-target="#convertedData" class="button-primary">Copy </button>
+             </div>
+           </div>
+         </div>
 
     </div>
   </div>

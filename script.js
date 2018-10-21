@@ -9,23 +9,32 @@ document.querySelector('#buttonOne').addEventListener("click", function(e) {
   if (checkData === 0) {
       dataToUse = dataToUse.substr(15);
       var replaced = dataToUse.split('\n').join(' OR ');
-      var firstQuery = queryOperator.concat(replaced)
-      var getQuery = firstQuery.concat(closingBracket)
-      document.querySelector("#convertedData").innerHTML = getQuery;
+      var split = replaced.match(/.{1,4000}/g)
+      split = split.map(i => 'author:(' + i + ")");
+      document.querySelector("#convertedData").innerHTML = split[0];
 
     }
   else {
     var replaced = dataToUse.split('\n').join(' OR ');
-    var firstQuery = queryOperator.concat(replaced)
-    var getQuery = firstQuery.concat(closingBracket)
-    document.querySelector("#convertedData").innerHTML = getQuery;
+    var replaced = dataToUse.split('\n').join(' OR ');
+    var split = replaced.match(/.{1,4000}/g)
+    split = split.map(i => 'author:(' + i + ")");
+    document.querySelector("#convertedData").innerHTML = split[0];
+    console.log(split)
+    var testTextBoxes = document.querySelector("#storingQueries")
+    testTextBoxes.innerHTML += ('beforeend',
+'<textarea id="convertedDataTwo" class="u-full-width" placeholder="Your query will appear here" id="exampleMessage"></textarea> <div id="buttonForCopy"> <button  data-clipboard-target="#convertedData" class="button-primary">Copy </button>');
+   document.querySelector("#convertedDataTwo").innerHTML = split[1]
+
+
   }
 
-  var split = replaced.match(/.{1,4000}/g)
-  split = split.map(i => 'author:(' + i + ")");
 
-  console.log(split);
 
 });
 
 new ClipboardJS('#buttonForCopy');
+new ClipboardJS('#buttonForCopyTwo');
+
+//`<div><textarea id="convertedDataTwo" class="u-full-width" placeholder="Your query will appear here" id="exampleMessage">hi</textarea>
+  //<button id="buttonForCopyTwo" data-clipboard-target="" class="button-primary">Copy </button> </div>`
