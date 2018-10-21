@@ -11,20 +11,41 @@ document.querySelector('#buttonOne').addEventListener("click", function(e) {
       var replaced = dataToUse.split('\n').join(' OR ');
       var split = replaced.match(/.{1,4000}/g)
       split = split.map(i => 'author:(' + i + ")");
-      document.querySelector("#convertedData").innerHTML = split[0];
+      var replaced = dataToUse.split('\n').join(' OR ');
+      var replaced = dataToUse.split('\n').join(' OR ');
+      var split = replaced.match(/.{1,4000}/g)
+
+      split = split.map(i => 'author:(' + i + ")");
+
+      for (var i = 0, len = split.length; i < len; i++) {
+        console.log(split[i]);
+        displayQuery(split[i]);
+      }
+
+      function displayQuery() {
+        var testTextBoxes = document.querySelector("#storingQueries")
+        testTextBoxes.innerHTML += `<textarea id="convertedDataTwo" class="u-full-width" placeholder="Your query will appear here" id="exampleMessage">${split[i]}</textarea> <div id="buttonForCopy"> <button  data-clipboard-target="#convertedData" class="button-primary">Copy </button>`
+      }
+
 
     }
   else {
     var replaced = dataToUse.split('\n').join(' OR ');
     var replaced = dataToUse.split('\n').join(' OR ');
     var split = replaced.match(/.{1,4000}/g)
+
     split = split.map(i => 'author:(' + i + ")");
-    document.querySelector("#convertedData").innerHTML = split[0];
-    console.log(split)
-    var testTextBoxes = document.querySelector("#storingQueries")
-    testTextBoxes.innerHTML += ('beforeend',
-'<textarea id="convertedDataTwo" class="u-full-width" placeholder="Your query will appear here" id="exampleMessage"></textarea> <div id="buttonForCopy"> <button  data-clipboard-target="#convertedData" class="button-primary">Copy </button>');
-   document.querySelector("#convertedDataTwo").innerHTML = split[1]
+
+    for (var i = 0, len = split.length; i < len; i++) {
+      console.log(split[i]);
+      displayQuery(split[i]);
+    }
+
+    function displayQuery() {
+      var testTextBoxes = document.querySelector("#storingQueries")
+      testTextBoxes.innerHTML += `<textarea id="convertedDataTwo" class="u-full-width" placeholder="Your query will appear here" id="exampleMessage">${split[i]}</textarea> <div id="buttonForCopy"> <button  data-clipboard-target="#convertedData" class="button-primary">Copy </button>`
+    }
+
 
 
   }
